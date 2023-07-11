@@ -1,0 +1,6 @@
+<h1 class="text-center">Add new List<h1>
+
+<%= simple_form_for [@list] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Add Movie List", class: "btn btn-primary" %>
+<% end %>

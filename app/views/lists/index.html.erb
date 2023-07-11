@@ -1,5 +1,9 @@
-<h1>My Lists</h1>
+<h1 class="text-center">My Lists</h1>
 
 <% @lists.each do |list|%>
-<p><%= link_to "#{list.name}", list_path(list) %></p>
+<div class="container">
+  <p><%= link_to "#{list.name}", list_path(list) %></p>
+</div>
 <% end %>
+
+<p><%= link_to "Add new List", lists_new_path %><p>

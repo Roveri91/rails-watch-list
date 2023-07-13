@@ -1,9 +1,15 @@
 <h1 class="text-center">My Lists</h1>
 
-<% @lists.each do |list|%>
-<div class="container">
-  <p><%= link_to "#{list.name}", list_path(list) %></p>
+<div class="container text-center">
+  <div class="row">
+    <% @lists.each do |list|%>
+      <div class="col card-category" style="background-image: url('<%= cl_image_path list.photo.key, height: 150, crop: :fill %>')" >
+        <p class="text-center"><%= link_to "#{list.name}", list_path(list) %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
-<% end %>
+
+
 
 <p><%= link_to "Add new List", lists_new_path %><p>

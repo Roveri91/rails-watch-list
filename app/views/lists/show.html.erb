@@ -1,14 +1,19 @@
 <h1 class="text-center"><%= @list.name %></h1>
 
-<% @movies.each do |movie|%>
 <div class="container">
-  <img src="<%=movie.poster_url%>" width="200px">
-  <h4><%= movie.title %></h4>
-  <p><%= movie.overview %></p>
-  
+  <% @movies.each do |movie|%>
+    <div class="container">
+      <div>
+        <img src="<%=movie.poster_url%>" width="200px">
+        <h4><%= movie.title %></h4>
+        <p><%= movie.overview %></p>
+      </div>
+      <p>Delete movie</p>
+    </div>
+  <% end %>
 </div>
-<% end %>
 
+<p>create bookmark</p>
 
 <div class="container">
   <%= link_to "Back To the list", lists_path %>

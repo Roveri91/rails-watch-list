@@ -17,7 +17,15 @@ body {
     height: 100vh;
 }
 
-#container {
-    min-height: 600px;
-    padding: 25px;
+.list {
+    height: 200px;
+    width: 300px;
+    background-repeat: no-repeat;
+}
+
+.list-name {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    color:rgb(52, 231, 46);
 }

@@ -3,10 +3,10 @@
 <div class="container text-center">
   <div class="row">
     <% @lists.each do |list|%>
-      <div class="col card-category" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key)
+        <div class="list m-2 col rounded-4" style="background-size: 400px; background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key)
             : 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' %>">
-        <p class="text-center"><%= link_to "#{list.name}", list_path(list) %></p>
-      </div>
+            <%= link_to "#{list.name}", list_path(list), class: "list-name align-middle" %>
+        </div>
     <% end %>
   </div>
 </div>

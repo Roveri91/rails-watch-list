@@ -1,10 +1,12 @@
-<h1 class="text-center">My Lists</h1>
 
+<div class="header-container">
+  <h1 class="text-center align-middle">My Lists</h1>
+</div>
 <div class="container text-center">
-  <div class="d-flex">
+  <div class="d-flex flex-wrap main-container">
     <% @lists.each do |list| %>
       <%= link_to list do %>
-        <div class="d-flex m-2 list rounded-4" style="background-size: 400px; background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' %>);">
+        <div class="d-flex m-2 list-container rounded-4" style="background-size: 400px; background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' %>);">
         <p class="list-name align-middle center m-auto"><%= list.name %></p>
         </div>
       <% end %>

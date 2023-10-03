@@ -1,0 +1,33 @@
+// all
+
+.header-container {
+  padding: 1rem 0;
+  border-bottom: 2px solid greenyellow;
+  height: 16vh;
+  margin-bottom: 2rem;
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+//index page
+
+.list-container {
+  height: 200px;
+  width: 300px;
+  background-repeat: no-repeat;
+}
+
+
+.list-name {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color:rgb(52, 231, 46);
+}
+
+.main-container {
+  border: 1px solid black;
+}

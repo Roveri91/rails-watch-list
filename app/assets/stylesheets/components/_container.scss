@@ -21,6 +21,12 @@ color: crimson;
   height: 200px;
   width: 300px;
   background-repeat: no-repeat;
+  border: 1px solid greenyellow;
+}
+
+.list-container:hover {
+  transform: scale(1.1);
+  opacity: .5;
 }
 
 
@@ -31,8 +37,4 @@ color: crimson;
   // color:rgb(52, 231, 46);
   color: greenyellow;
   text-shadow: 1px 1px crimson;
-}
-
-.main-container {
-  border: 1px solid black;
 }

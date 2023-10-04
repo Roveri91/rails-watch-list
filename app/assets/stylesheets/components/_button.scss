@@ -4,3 +4,10 @@
   border-radius: 3rem;
   font-family: 'Space Grotesk', sans-serif;
 }
+
+.btn-submit:hover {
+  // background-color: rgb(171, 201, 126);
+  background-color: greenyellow;
+  transform: scale(1.1);
+  opacity: .5;
+}

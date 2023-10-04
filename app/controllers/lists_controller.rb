@@ -12,10 +12,10 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  def create 
+  def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to list_path(@list)
+    @list.save!
+    redirect_to lists_path(@list)
   end
 
   private

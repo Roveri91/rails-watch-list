@@ -1,16 +1,14 @@
-<h1 class="text-center">My Lists</h1>
+
 
 <div class="container text-center">
-  <div class="row">
-    <% @lists.each do |list|%>
-        <div class="list m-2 col rounded-4" style="background-size: 400px; background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key)
-            : 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' %>">
-            <%= link_to "#{list.name}", list_path(list), class: "list-name align-middle" %>
+  <div class="d-flex flex-wrap main-container m-auto justify-content-center">
+    <% @lists.each do |list| %>
+      <%= link_to list do %>
+        <div class="d-flex m-3 list-container rounded-4" style="background-size: 400px; background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' %>);">
+        <p class="list-name align-middle center m-auto"><%= list.name %></p>
         </div>
+      <% end %>
     <% end %>
   </div>
+  <p class="mt-5 btn btn-submit "><%= link_to "+ Add List", new_list_path %></p>
 </div>
-
-
-
-<p><%= link_to "Add new List", lists_new_path %><p>

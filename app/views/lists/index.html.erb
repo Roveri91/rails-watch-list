@@ -1,7 +1,5 @@
 
-<div class="header-container">
-  <h1 class="text-center align-middle">My Lists</h1>
-</div>
+
 <div class="container text-center">
   <div class="d-flex flex-wrap main-container">
     <% @lists.each do |list| %>
@@ -12,5 +10,5 @@
       <% end %>
     <% end %>
   </div>
-  <p class="mt-5 btn btn-primary "><%= link_to "+ Add List", new_list_path %></p>
+  <p class="mt-5 btn btn-submit "><%= link_to "+ Add List", new_list_path %></p>
 </div>

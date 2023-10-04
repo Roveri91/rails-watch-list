@@ -1,15 +1,18 @@
 // all
 
 .header-container {
+  font-family: 'Black Ops One', cursive;
   padding: 1rem 0;
-  border-bottom: 2px solid greenyellow;
-  height: 16vh;
+  border-bottom: 2px solid crimson;
+  height: 75px;
   margin-bottom: 2rem;
+  background-color: greenyellow;
+  color: crimson;
 }
 
 a {
 text-decoration: none;
-color: white;
+color: crimson;
 }
 
 //index page
@@ -25,7 +28,9 @@ color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 30px;
-  color:rgb(52, 231, 46);
+  // color:rgb(52, 231, 46);
+  color: greenyellow;
+  text-shadow: 1px 1px crimson;
 }
 
 .main-container {

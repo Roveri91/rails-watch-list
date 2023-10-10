@@ -1,0 +1,8 @@
+<div class="header-container">
+  <% if request.path == "/" %>
+    <h1 class="text-center ">My Lists</h1>
+  <% elsif request.path.include? "lists" %>
+    <h1 class="text-center "><%= @list.name %></h1>
+  <% end %>
+
+</div>

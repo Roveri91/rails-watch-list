@@ -1,6 +1,8 @@
 <div class="header-container">
   <% if request.path == "/" %>
     <h1 class="text-center">My Lists</h1>
+  <% elsif request.path.include? "bookmarks" %>
+    <h1 class="text-center">Add a Movie</h1>
   <% elsif request.path.include? "new" %>
     <h1 class="text-center">Add new List</h1>
   <% elsif request.path.include? "lists" %>

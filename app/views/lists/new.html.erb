@@ -2,6 +2,9 @@
   <%= simple_form_for [@list] do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Add Movie List", class: "btn btn-primary" %>
+    <button class="btn btn-submit" type="submit">Submit</button>
+  <% end %>
+  <%= link_to root_path do %>
+    <p class="mt-5 btn btn-back">Back</p>
   <% end %>
 </div>

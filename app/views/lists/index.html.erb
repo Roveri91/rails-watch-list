@@ -10,5 +10,7 @@
       <% end %>
     <% end %>
   </div>
-  <p class="mt-5 btn btn-submit "><%= link_to "+ Add List", new_list_path %></p>
+  <%= link_to new_list_path do %>
+    <p class="mt-5 btn btn-submit ">+ Add List</p>
+  <% end %>
 </div>

@@ -1,18 +1,31 @@
-<div class="container">
-  <% @movies.each do |movie|%>
-    <div class="container">
-      <div>
-        <img src="<%=movie.poster_url%>" width="200px">
-        <h4><%= movie.title %></h4>
-        <p><%= movie.overview %></p>
+<div class="container text-center">
+  <div class="row">
+    <% @movies.each do |movie|%>
+      <div class="col-3">
+      <div class="movie-container">
+        <div class="movie-image-container">
+          <img src="<%=movie.poster_url%>" width="200px">
+        </div>
+        <div class="movie-text-container p-2">
+          <h3><%= movie.title %></h3>
+          <p><%= movie.overview %></p>
+        </div>
+        <p>Delete movie</p>
       </div>
-      <p>Delete movie</p>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<p class="mt-5 btn btn-submit"><%= link_to "Bookamark", new_list_bookmark_path(@list) %></p>
 
 <div class="container">
-  <p class="mt-5 btn btn-submit"><%= link_to "Back To the list", root_path %></p>
+  <%= link_to new_list_bookmark_path(@list) do %>
+    <p class="mt-5 btn btn-submit">+ Add Movie</p>
+  <% end %>
+  <%= link_to root_path do %>
+    <p class="mt-5 btn btn-back">Back</p>
+  <% end %>
+  <%= link_to list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+    <p class="mt-5 btn btn-delete">Delete The List</p>
+  <% end %>
 </div>

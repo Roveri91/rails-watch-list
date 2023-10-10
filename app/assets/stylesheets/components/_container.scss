@@ -42,11 +42,23 @@ color: black;
 // SHOW PAGE
 
 .movie-container {
-
+  height: 600px;
+  padding: 2rem;
   border: 2px solid greenyellow;
   border-radius: 5px;
 }
 
-.image-container img {
-  border-radius: 10px;
+.movie-image-container img {
+  border-radius: 5px;
+}
+
+.movie-text-container h3{
+  color: crimson;
+  font-family: 'Black Ops One', cursive;
+  text-shadow: 1px 1px 1px yellowgreen;
+}
+
+.movie-text-container p{
+  color: yellowgreen;
+
 }

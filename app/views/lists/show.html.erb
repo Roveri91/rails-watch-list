@@ -1,5 +1,3 @@
-<h1 class="text-center"><%= @list.name %></h1>
-
 <div class="container">
   <% @movies.each do |movie|%>
     <div class="container">
@@ -13,8 +11,8 @@
   <% end %>
 </div>
 
-<p class="mt-5 btn btn-primary "><%= link_to "Bookamark", new_list_bookmark_path(@list) %></p>
+<p class="mt-5 btn btn-submit"><%= link_to "Bookamark", new_list_bookmark_path(@list) %></p>
 
 <div class="container">
-  <p class="mt-5 btn btn-primary "><%= link_to "Back To the list", root_path %></p>
+  <p class="mt-5 btn btn-submit"><%= link_to "Back To the list", root_path %></p>
 </div>

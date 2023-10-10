@@ -1,4 +1,4 @@
-// all
+// ALL
 
 .header-container {
   font-family: 'Black Ops One', cursive;
@@ -15,7 +15,7 @@ text-decoration: none;
 color: black;
 }
 
-//index page
+//INDEX PAGE
 
 .list-container {
   height: 200px;
@@ -37,4 +37,16 @@ color: black;
   // color:rgb(52, 231, 46);
   color: greenyellow;
   text-shadow: 1px 1px crimson;
+}
+
+// SHOW PAGE
+
+.movie-container {
+
+  border: 2px solid greenyellow;
+  border-radius: 5px;
+}
+
+.image-container img {
+  border-radius: 10px;
 }

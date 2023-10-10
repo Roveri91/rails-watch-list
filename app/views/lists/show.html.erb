@@ -19,6 +19,13 @@
 
 
 <div class="container">
-  <p class="mt-5 btn btn-submit"><%= link_to "Add Movie", new_list_bookmark_path(@list) %></p>
-  <p class="mt-5 btn btn-submit"><%= link_to "Back", root_path %></p>
+  <%= link_to new_list_bookmark_path(@list) do %>
+    <p class="mt-5 btn btn-submit">+ Add Movie</p>
+  <% end %>
+  <%= link_to root_path do %>
+    <p class="mt-5 btn btn-back">Back</p>
+  <% end %>
+  <%= link_to list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+    <p class="mt-5 btn btn-delete">Delete The List</p>
+  <% end %>
 </div>

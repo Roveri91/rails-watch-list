@@ -1,3 +1,5 @@
+//SUBMIT BUTTON
+
 .btn-submit{
   padding: 1rem 2rem;
   background-color: transparent;
@@ -19,6 +21,68 @@
   position: absolute;
   border-radius: 0.3rem;
   background-color: greenyellow;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+//BACK BUTTON
+
+.btn-back{
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 3px solid aliceblue;
+  border-radius: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-back:hover::before {
+  background-color: aliceblue;
+  width: 100%;
+  // border: 3px solid greenyellow;
+}
+
+.btn-back::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.3rem;
+  background-color: aliceblue;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+// DELETE BUTTON
+
+.btn-delete{
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 3px solid crimson;
+  border-radius: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-delete:hover::before {
+  background-color: crimson;
+  width: 100%;
+  // border: 3px solid greenyellow;
+}
+
+.btn-delete::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.3rem;
+  background-color: crimson;
   width: 0;
   height: 100%;
   top: 0;

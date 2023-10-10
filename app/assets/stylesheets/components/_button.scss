@@ -1,13 +1,28 @@
 .btn-submit{
   padding: 1rem 2rem;
-  background-color: greenyellow;
-  border-radius: 3rem;
+  background-color: transparent;
+  border: 3px solid greenyellow;
+  border-radius: 0.5rem;
   font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-submit:hover {
-  // background-color: rgb(171, 201, 126);
+.btn-submit:hover::before {
   background-color: greenyellow;
-  transform: scale(1.1);
-  opacity: .5;
+  width: 100%;
+  // border: 3px solid greenyellow;
+}
+
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.3rem;
+  background-color: greenyellow;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
 }

@@ -8,15 +8,9 @@
           </div>
           <div class="movie-text-container p-2">
             <h3><%= movie.title %></h3>
+            <h3><%= movie.rating %> <i class="fa-solid fa-star fa-spin fa-sm" style="color: #adff2f;"></i></h3>
             <p><%= movie.overview %></p>
           </div>
-          <%#= button_to bookmark, form: { data: { turbo_confirm: 'Are you sure?' } } , method: :delete do %>
-            <%# <p class="mt-5 btn btn-delete">Delete movie</p> %>
-          <%# end %>
-
-          <%#= link_to list_path(@list) do  %>
-            <%# <p class="mt-5 btn btn-delete">Delete movie</p> %>
-          <%# end %>
         </div>
       </div>
     <% end %>

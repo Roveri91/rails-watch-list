@@ -2,16 +2,16 @@
   <div class="row">
     <% @movies.each do |movie|%>
       <div class="col-3">
-      <div class="movie-container">
-        <div class="movie-image-container">
-          <img src="<%=movie.poster_url%>" width="200px">
+        <div class="movie-container">
+          <div class="movie-image-container">
+            <img src="<%=movie.poster_url%>" width="200px">
+          </div>
+          <div class="movie-text-container p-2">
+            <h3><%= movie.title %></h3>
+            <h3><%= movie.rating %> <i class="fa-solid fa-star fa-spin fa-sm" style="color: #adff2f;"></i></h3>
+            <p><%= movie.overview %></p>
+          </div>
         </div>
-        <div class="movie-text-container p-2">
-          <h3><%= movie.title %></h3>
-          <p><%= movie.overview %></p>
-        </div>
-        <p>Delete movie</p>
-      </div>
       </div>
     <% end %>
   </div>

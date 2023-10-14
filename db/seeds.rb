@@ -23,10 +23,24 @@ html_file = URI.open(url).read
 html_doc = Nokogiri::HTML.parse(html_file)
 
 
-html_doc.search(".lister-item-header").first(5).each do |element|
+html_doc.search(".lister-item").first(5).each do |element|
+  image_class = element.search(".loadlate")
+  image_element = image_class.at('img')
+  src_value = image_element['src']
+  puts src_value
+
+  container = element.search(".lister-item-content")
+  title_h3 = container.search(".lister-item-header")
   # Find the anchor tag within the selected element
-  anchor_tag = element.at('a')
-  puts anchor_tag.text
+  title = title_h3.at('a').text
+  puts title
+  overview = element.search(".text-muted")[2].text
+  puts overview
+  rating = element.search(".ratings-imdb-rating").at('[data-value]')
+  puts rating = rating['data-value']
+
+  Movie.create!(title: title, overview: overview, rating: rating, poster_url: src_value)
+
   # puts element.attribute("href").value
 end
 

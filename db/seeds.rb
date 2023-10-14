@@ -22,8 +22,11 @@ url = "https://www.imdb.com/search/title/?genres=#{genres}"
 html_file = URI.open(url).read
 html_doc = Nokogiri::HTML.parse(html_file)
 
-html_doc.search("lister-item-index a").first(5).each do |element|
-  puts element.text.strip
+
+html_doc.search(".lister-item-header").first(5).each do |element|
+  # Find the anchor tag within the selected element
+  anchor_tag = element.at('a')
+  puts anchor_tag.text
   # puts element.attribute("href").value
 end
 

@@ -10,6 +10,26 @@ List.destroy_all
 Bookmark.destroy_all
 Movie.destroy_all
 
+
+# SCREAPING
+
+require "open-uri"
+require "nokogiri"
+
+genres = "comedy"
+url = "https://www.imdb.com/search/title/?genres=#{genres}"
+
+html_file = URI.open(url).read
+html_doc = Nokogiri::HTML.parse(html_file)
+
+html_doc.search("lister-item-index a").first(5).each do |element|
+  puts element.text.strip
+  # puts element.attribute("href").value
+end
+
+
+# ----------------------
+
 p "crating list"
 drama = List.create(name: "Drama")
 p "creating movies"

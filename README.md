@@ -10,10 +10,10 @@ Watch-List is the ultimate app for all cinephiles and movie enthusiasts, designe
 
 📱SCREENSHOT
 ---
+![Screenshot 2023-10-19 201603](https://github.com/Roveri91/rails-watch-list/assets/105217392/edb80d89-8242-4273-9f27-346b034656d2)
+![Screenshot 2023-10-19 201814](https://github.com/Roveri91/rails-watch-list/assets/105217392/c1072e10-9547-48dc-9fd6-1b17e1f7a48d)
 ![Screenshot 2023-10-19 201923](https://github.com/Roveri91/rails-watch-list/assets/105217392/fef0cedd-a649-433c-9cd4-4f72e7f41272)
 ![Screenshot 2023-10-19 201837](https://github.com/Roveri91/rails-watch-list/assets/105217392/73bab35a-a35e-4b16-81af-b30fa2331e33)
-![Screenshot 2023-10-19 201814](https://github.com/Roveri91/rails-watch-list/assets/105217392/c1072e10-9547-48dc-9fd6-1b17e1f7a48d)
-![Screenshot 2023-10-19 201603](https://github.com/Roveri91/rails-watch-list/assets/105217392/edb80d89-8242-4273-9f27-346b034656d2)
 
 ---
 
